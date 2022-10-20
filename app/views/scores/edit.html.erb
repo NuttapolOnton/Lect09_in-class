@@ -1,0 +1,15 @@
+<h1>Editing score</h1>
+<% url = scores_path%>
+<% if @from == "1"%>
+<%="student id : " + @id.to_s%>
+<% url = "/students/" + @id.to_s + "/edit_score"%>
+<% end%>
+<%= render "form", score: @score %>
+
+<br>
+
+<div>
+  
+  <%= link_to "Show this score", @score %> |
+  <%= link_to "Back to scores", url %>
+</div>
